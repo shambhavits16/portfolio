@@ -52,6 +52,15 @@ html,body{
     margin-top: 90px;
 }
 
+.bounding {
+    width: fit-content;
+    overflow: hidden;
+}
+
+.bounding .boundingelem {
+    transform: translateY(100%);
+}
+
 #heading h1{
     margin-left: 30px;
     opacity: .6;
@@ -66,6 +75,9 @@ html,body{
 }
 
 .blocktext{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
     width: fit-content;
 }
 
@@ -76,6 +88,9 @@ html,body{
 }
 
 #smallheadings{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
     margin-top: 100px;
     padding-right: 50px;
 }
@@ -162,14 +177,15 @@ html,body{
     align-items: center;
     gap: 50px;
     color: #fff;
-    padding: 20vw 20vw;
-    padding-left: 40vw;
+    padding-top: 25vw;
+    padding-bottom: 8vw;
+    padding-left: 42vw;
     width: 100%;
     background-color: black;
 }
 
 #textabout {
-    width: 25rem;
+    width: 26rem;
 }
 
 #textabout h5 {
@@ -180,7 +196,11 @@ html,body{
 
 #textabout p {
     line-height: 1.7;
-    margin-bottom: 30px;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 }
 
 #about img {
