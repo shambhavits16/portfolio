@@ -90,3 +90,22 @@ document.querySelectorAll(".elem").forEach(function(elem){
     });
   });
 });
+
+function updateTime() {
+  const now = new Date();
+  let hours = now.getHours();
+  const minutes = now.getMinutes().toString().padStart(2, '0'); // Get minutes and pad with zero if needed
+  const amPm = hours >= 12 ? 'PM' : 'AM';
+
+  hours = hours % 12 || 12; // Convert hours to 12-hour format
+  const timeString = `${hours}:${minutes} ${amPm} IST`; // Format the time
+
+  document.getElementById('timeDisplay').textContent = timeString; // Update the content of the element
+}
+
+// Call updateTime initially to set the time when the page loads
+updateTime();
+
+// Call updateTime every second to update the time dynamically
+setInterval(updateTime, 1000);
+

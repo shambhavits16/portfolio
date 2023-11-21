@@ -215,6 +215,12 @@ html,body{
     color: #fff;
     font-size: 12px;
     text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+#textabout a:hover {
+    background-color: #fff;
+    color: #000; /* Changing text color on hover */
 }
 
 #subscribe {
